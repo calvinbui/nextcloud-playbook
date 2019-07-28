@@ -19,5 +19,5 @@
     - calvinbui.ansible_pip
     - calvinbui.ansible_docker_network
     - calvinbui.ansible_mariadb_docker
-    - calvinbui.ansible_bookstack_docker
+    - calvinbui.ansible_nextcloud_docker
     - calvinbui.ansible_datadog
