@@ -14,5 +14,8 @@
 - src: calvinbui.ansible_nextcloud_docker
   version: '1.0.0'
 
+- src: calvinbui.ansible_onlyoffice_docker
+  version: '1.0.0'
+
 - src: calvinbui.ansible_datadog
   version: '1.0.2'

@@ -20,4 +20,5 @@
     - calvinbui.ansible_docker_network
     - calvinbui.ansible_mariadb_docker
     - calvinbui.ansible_nextcloud_docker
+    - calvinbui.ansible_onlyoffice_docker
     - calvinbui.ansible_datadog
