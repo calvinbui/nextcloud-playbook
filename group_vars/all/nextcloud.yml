@@ -1,0 +1,27 @@
+---
+
+nextcloud_name: nextcloud
+nextcloud_image: "nextcloud:{{ nextcloud_build_folder }}"
+nextcloud_ports:
+  - 80:80
+nextcloud_directory: "{{ common_directory_config }}/nextcloud"
+nextcloud_environment_variables:
+  NEXTCLOUD_ADMIN_USER: "{{ common_user }}"
+  NEXTCLOUD_ADMIN_PASSWORD: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          34373162656662326631363762383431623164666236666434306665316263303035316336303163
+          6665626235353661313363633732383734343237356165640a333966663962356561346362366635
+          32393133663937386338343839346662623631306333653833356634393833326465613932353931
+          3138613230353462620a383130653733326661386336393737643233396464353061386431316264
+          64663865643961313431333430373362353366323836386238623831646139356537
+  MYSQL_DATABASE: "{{ mariadb_environment_variables.MYSQL_DATABASE }}"
+  MYSQL_USER: "{{ mariadb_environment_variables.MYSQL_USER }}"
+  MYSQL_PASSWORD: "{{ mariadb_environment_variables.MYSQL_PASSWORD }}"
+  MYSQL_HOST: "{{ mariadb_name }}.{{ docker_networks[0].name }}"
+
+nextcloud_docker_additional_options:
+  restart_policy: unless-stopped
+  networks: "{{ docker_networks }}"
+
+nextcloud_build_image: true
+nextcloud_build_folder: "full-with-libreoffice"
