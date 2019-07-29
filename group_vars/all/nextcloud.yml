@@ -14,11 +14,11 @@ nextcloud_environment_variables:
           32393133663937386338343839346662623631306333653833356634393833326465613932353931
           3138613230353462620a383130653733326661386336393737643233396464353061386431316264
           64663865643961313431333430373362353366323836386238623831646139356537
-  NEXTCLOUD_TRUSTED_DOMAINS: "{{ ansible_host }} nextcloud.bui.sh bui.services"
+  NEXTCLOUD_TRUSTED_DOMAINS: "{{ ansible_host }} nextcloud.{{ internal_domain }} {{ nextcloud_domain }}"
   NEXTCLOUD_UPDATE: "1"
   MYSQL_DATABASE: "{{ mariadb_environment_variables.MYSQL_DATABASE }}"
-  MYSQL_USER: "{{ mariadb_environment_variables.MYSQL_USER }}"
-  MYSQL_PASSWORD: "{{ mariadb_environment_variables.MYSQL_PASSWORD }}"
+  MYSQL_USER: "root"
+  MYSQL_PASSWORD: "{{ mariadb_environment_variables.MYSQL_ROOT_PASSWORD }}"
   MYSQL_HOST: "{{ mariadb_name }}.{{ docker_networks[0].name }}"
 
 nextcloud_docker_additional_options:
