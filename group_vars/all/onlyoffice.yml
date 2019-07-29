@@ -3,7 +3,7 @@
 onlyoffice_name: onlyoffice
 onlyoffice_image: onlyoffice/documentserver
 onlyoffice_ports:
-  - 8080:80
+  - 8082:80
 onlyoffice_logs_directory: "{{ common_directory_config }}/logs"
 onlyoffice_certificates_directory: "{{ common_directory_config }}/data"
 onlyoffice_environment_variables:

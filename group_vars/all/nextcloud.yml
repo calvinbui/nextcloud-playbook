@@ -3,7 +3,7 @@
 nextcloud_name: nextcloud
 nextcloud_image: "nextcloud:{{ nextcloud_build_folder }}"
 nextcloud_ports:
-  - 80:80
+  - 8081:80
 nextcloud_directory: "{{ common_directory_config }}/nextcloud"
 nextcloud_environment_variables:
   NEXTCLOUD_ADMIN_USER: "{{ common_user }}"
@@ -24,6 +24,8 @@ nextcloud_environment_variables:
 nextcloud_docker_additional_options:
   restart_policy: unless-stopped
   networks: "{{ docker_networks }}"
+  labels:
+    traefik.frontend.rule: "Host:{{ common_tld }}"
 
 nextcloud_build_image: true
 nextcloud_build_folder: "full-with-libreoffice"
