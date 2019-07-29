@@ -27,5 +27,5 @@ mariadb_environment_variables:
 mariadb_docker_additional_options:
   restart_policy: unless-stopped
   networks: "{{ docker_networks }}"
-  label:
+  labels:
     traefik.enable: false
