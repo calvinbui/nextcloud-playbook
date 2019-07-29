@@ -28,4 +28,4 @@ mariadb_docker_additional_options:
   restart_policy: unless-stopped
   networks: "{{ docker_networks }}"
   labels:
-    traefik.enable: false
+    traefik.enable: "false"
