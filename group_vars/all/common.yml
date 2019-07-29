@@ -6,6 +6,7 @@ common_group: "calvin"
 common_user_id: "1000" # calvin
 common_group_id: "1000" # calvin
 common_directory_config: "/nextcloud"
+common_shared_directory_config: "/mnt/nextcloud"
 common_tld: !vault |
           $ANSIBLE_VAULT;1.1;AES256
           62646336303337363636623431353266623639323037623464326336643930653534346634313466
