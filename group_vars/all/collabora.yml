@@ -7,8 +7,8 @@ collabora_ports:
 collabora_logs_directory: "{{ common_directory_config }}/logs"
 collabora_certificates_directory: "{{ common_directory_config }}/data"
 collabora_environment_variables:
-  DONT_GEN_SSL_CERT: "true"
-  SSL_VERIFY_CLIENT: "false"
+  server_name: "{{ nextcloud_domain }}"
+  cert_domain: "{{ nextcloud_domain }}"
 
 collabora_docker_additional_options:
   restart_policy: unless-stopped
