@@ -4,8 +4,6 @@ collabora_name: collabora
 collabora_image: collabora/code
 collabora_ports:
   - 9980:9980
-collabora_logs_directory: "{{ common_directory_config }}/logs"
-collabora_certificates_directory: "{{ common_directory_config }}/data"
 collabora_environment_variables:
   server_name: "{{ nextcloud_domain }}"
   cert_domain: "{{ nextcloud_domain }}"
@@ -13,3 +11,5 @@ collabora_environment_variables:
 collabora_docker_additional_options:
   restart_policy: unless-stopped
   networks: "{{ docker_networks }}"
+  capabilities:
+    - MKNOD
