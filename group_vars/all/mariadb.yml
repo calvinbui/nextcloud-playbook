@@ -5,7 +5,7 @@ mariadb_version: '10.4.6-bionic'
 mariadb_image: "mariadb:{{ mariadb_version }}"
 mariadb_ports: []
 mariadb_volumes:
-  - "{{ common_shared_directory_config }}/mariadb:/var/lib/mysql"
+  - "{{ common_directory_config }}/mariadb:/var/lib/mysql"
 mariadb_environment_variables:
   MYSQL_ROOT_PASSWORD: !vault |
           $ANSIBLE_VAULT;1.1;AES256

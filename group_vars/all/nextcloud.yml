@@ -4,7 +4,7 @@ nextcloud_name: nextcloud
 nextcloud_image: "nextcloud:{{ nextcloud_build_folder }}"
 nextcloud_ports:
   - 8081:80
-nextcloud_directory: "{{ common_shared_directory_config }}/nextcloud"
+nextcloud_directory: "{{ common_mounted_dir }}/nextcloud"
 nextcloud_environment_variables:
   NEXTCLOUD_ADMIN_USER: "{{ common_user }}"
   NEXTCLOUD_ADMIN_PASSWORD: !vault |
