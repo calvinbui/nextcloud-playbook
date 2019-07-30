@@ -12,10 +12,10 @@
   version: '1.0.0'
 
 - src: calvinbui.ansible_nextcloud_docker
-  version: '1.0.1'
+  version: '1.0.3'
 
 - src: calvinbui.ansible_onlyoffice_docker
-  version: '1.0.0'
+  version: '1.0.1'
 
 - src: calvinbui.ansible_collabora_docker
   version: '1.0.0'
