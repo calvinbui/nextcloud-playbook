@@ -15,7 +15,7 @@
   version: '1.0.3'
 
 - src: calvinbui.ansible_onlyoffice_docker
-  version: '1.0.1'
+  version: '1.1.0'
 
 - src: calvinbui.ansible_collabora_docker
   version: '1.0.1'
