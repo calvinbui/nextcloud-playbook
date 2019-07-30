@@ -4,9 +4,6 @@ logLevel = "INFO"
 # https://docs.traefik.io/user-guide/examples/#http-redirect-on-https
 defaultEntryPoints = ["http", "https"]
 
-[web]
-address = ":8080"
-
 [entryPoints]
   [entryPoints.http]
     address = ":80"
@@ -21,6 +18,12 @@ address = ":8080"
         "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
         "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305"
       ]
+  [entryPoints.api]
+    address = ":8080"
+
+[api]
+  dashboard = true
+  entryPoint = "api"
 
 # https://docs.traefik.io/user-guide/examples/#dns-challenge-with-wildcard-domains
 [acme]
