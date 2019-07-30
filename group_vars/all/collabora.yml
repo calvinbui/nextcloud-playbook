@@ -2,8 +2,7 @@
 
 collabora_name: collabora
 collabora_image: collabora/code
-collabora_ports:
-  - 9980:9980
+collabora_ports: []
 collabora_environment_variables:
   server_name: "{{ nextcloud_domain }}"
   cert_domain: "{{ nextcloud_domain }}"
