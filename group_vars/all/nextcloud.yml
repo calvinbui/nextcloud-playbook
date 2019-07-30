@@ -3,7 +3,7 @@
 nextcloud_name: nextcloud
 nextcloud_image: "nextcloud:{{ nextcloud_build_folder }}"
 nextcloud_ports:
-  - 8080:80
+  - 8081:80
 nextcloud_directory: "{{ common_mounted_dir }}"
 nextcloud_environment_variables:
   NEXTCLOUD_ADMIN_USER: "{{ common_user }}"
