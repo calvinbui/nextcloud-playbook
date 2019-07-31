@@ -12,3 +12,5 @@ collabora_docker_additional_options:
   networks: "{{ docker_networks }}"
   capabilities:
     - MKNOD
+  labels:
+    traefik.protocol: https
