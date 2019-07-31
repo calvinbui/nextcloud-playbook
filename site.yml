@@ -28,4 +28,5 @@
   post_tasks:
     - name: Overwrite Nextcloud protocol to HTTPS within config
       command: "docker exec --user www-data {{ nextcloud_name }} php occ config:system:set overwriteprotocol --value='https'"
-      changed_when: false
+      register: command_result
+      failed_when: "'System config value overwriteprotocol set to string https' not in command_result.stdout"
