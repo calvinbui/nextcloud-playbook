@@ -26,6 +26,10 @@ nextcloud_docker_additional_options:
   networks: "{{ docker_networks }}"
   labels:
     traefik.frontend.rule: "Host:{{ common_tld }}"
+    # HSTS
+    traefik.frontend.headers.STSSeconds: "31536000"
+    traefik.frontend.headers.STSIncludeSubdomains: "true"
+    traefik.frontend.headers.STSPreload: "true"
 
 nextcloud_build_image: true
 nextcloud_build_folder: "full-with-libreoffice"
