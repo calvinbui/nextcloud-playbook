@@ -25,3 +25,7 @@
     - calvinbui.ansible_onlyoffice_docker
     - calvinbui.ansible_collabora_docker
     - calvinbui.ansible_datadog
+  post_tasks:
+    - name: Overwrite Nextcloud protocol to HTTPS within config
+      command: "docker exec --user www-data {{ nextcloud_name }} php occ config:system:set overwriteprotocol --value='https'"
+      changed_when: false
