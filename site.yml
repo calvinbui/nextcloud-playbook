@@ -30,3 +30,4 @@
       command: "docker exec --user www-data {{ nextcloud_name }} php occ config:system:set overwriteprotocol --value='https'"
       register: command_result
       failed_when: "'System config value overwriteprotocol set to string https' not in command_result.stdout"
+      changed_when: false
