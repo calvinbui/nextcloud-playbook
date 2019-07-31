@@ -4,8 +4,8 @@ collabora_name: collabora
 collabora_image: collabora/code
 collabora_ports: []
 collabora_environment_variables:
-  server_name: "{{ nextcloud_domain }}"
-  cert_domain: "{{ nextcloud_domain }}"
+  server_name: "{{ (collabora_name + '.' + nextcloud_domain) | regex_replace('\\.', '\\\\.') }}"
+  cert_domain: "{{ (collabora_name + '.' + nextcloud_domain) | regex_replace('\\.', '\\\\.') }}"
 
 collabora_docker_additional_options:
   restart_policy: unless-stopped
