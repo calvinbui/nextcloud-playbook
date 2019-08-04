@@ -1,6 +1,0 @@
----
-
-nfs_mount_name: "{{ common_mounted_dir }}"
-nfs_mount_src: "freenas.{{ internal_domain }}:/mnt/files/Nextcloud/"
-nfs_mount_owner: "{{ common_user }}"
-nfs_mount_group: "{{ common_group }}"

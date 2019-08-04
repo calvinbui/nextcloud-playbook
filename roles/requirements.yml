@@ -25,6 +25,3 @@
 
 - src: calvinbui.ansible_datadog
   version: '1.0.2'
-
-- src: calvinbui.ansible_nfs_client
-  version: '1.0.0'
