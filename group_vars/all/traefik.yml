@@ -13,7 +13,7 @@ traefik_docker_additional_options:
   networks: "{{ docker_networks }}"
   labels:
     traefik.port: "{{ traefik_ports[0].split(':')[0] }}"
-    traefik.enabled: "false"
+    traefik.enable: "false"
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
     - "{{ traefik_config_directory }}/traefik.toml:/traefik.toml"
