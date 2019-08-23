@@ -18,6 +18,7 @@
     - calvinbui.ansible_docker
     - calvinbui.ansible_pip
     - calvinbui.ansible_docker_network
+    - calvinbui.ansible_watchtower
     - calvinbui.ansible_traefik
     - calvinbui.ansible_mariadb_docker
     - calvinbui.ansible_nextcloud_docker
