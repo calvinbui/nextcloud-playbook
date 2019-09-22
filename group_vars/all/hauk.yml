@@ -3,8 +3,7 @@
 hauk_name: hauk
 hauk_image: bilde2910/hauk
 hauk_config_directory: "{{ common_directory_config }}/{{ hauk_name }}"
-hauk_ports:
-  - 8080:80
+hauk_ports: []
 hauk_docker_additional_options:
   restart_policy: unless-stopped
 
