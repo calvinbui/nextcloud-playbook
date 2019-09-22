@@ -27,3 +27,6 @@
   version: '1.0.2'
 
 - src: calvinbui.ansible_hauk
+
+- src: calvinbui.ansible_watchtower
+  version: '1.0.0'
