@@ -24,7 +24,7 @@
     - calvinbui.ansible_nextcloud_docker
     - calvinbui.ansible_onlyoffice_docker
     - calvinbui.ansible_collabora_docker
-    - calvinbui.absible_hauk
+    - calvinbui.ansible_hauk
     - calvinbui.ansible_datadog
   post_tasks:
     - name: Overwrite Nextcloud protocol to HTTPS within config
