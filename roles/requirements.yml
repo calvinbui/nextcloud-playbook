@@ -25,3 +25,5 @@
 
 - src: calvinbui.ansible_datadog
   version: '1.0.2'
+
+- src: calvinbui.ansible_hauk
