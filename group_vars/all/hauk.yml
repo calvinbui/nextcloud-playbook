@@ -9,4 +9,4 @@ hauk_docker_additional_options:
   restart_policy: unless-stopped
 
 hauk_domain: "hauk.{{ common_tld }}"
-hauk_password: $2y$10$9hYQ2LNYkUA2vrNmMkuabOCnZIIxRy/7MDGXuRE31pYnNywsDOsVC
+hauk_password: "$2y$10$ABxFMeoCHxEFplmmHQpVk.fO2bfUCta4BS0jF9fGonvzLSTmJIMYi"
