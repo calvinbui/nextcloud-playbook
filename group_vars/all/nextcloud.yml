@@ -47,6 +47,8 @@ nextcloud_docker_additional_options:
     traefik.frontend.headers.STSSeconds: "31536000"
     traefik.frontend.headers.STSIncludeSubdomains: "true"
     traefik.frontend.headers.STSPreload: "true"
+  log_options:
+    max-size: "10m"
 
 nextcloud_build_image: true
 nextcloud_build_folder: "full"

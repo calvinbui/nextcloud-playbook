@@ -7,6 +7,8 @@ hauk_ports:
   - 8081:80
 hauk_docker_additional_options:
   restart_policy: unless-stopped
+  log_options:
+    max-size: "10m"
 
 hauk_domain: "hauk.{{ common_tld }}"
 hauk_password: "$2y$10$ABxFMeoCHxEFplmmHQpVk.fO2bfUCta4BS0jF9fGonvzLSTmJIMYi"

@@ -13,3 +13,5 @@ collabora_docker_additional_options:
   networks: "{{ docker_networks }}"
   capabilities:
     - MKNOD
+  log_options:
+    max-size: "10m"
